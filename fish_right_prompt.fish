@@ -86,16 +86,6 @@ function git::untracked
 	end
 end
 
-# Kubernetes
-
-function k8s::current_context
-    command kubectl config current-context
-end
-
-function k8s::current_namespace
-    command kubectl config view --minify -o jsonpath='{.contexts[0].context.namespace}'
-end
-
 # Terraform
 
 # Test whether this is a terraform directory by finding .tf files
